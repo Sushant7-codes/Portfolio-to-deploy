@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+ <p class="hello">Hello everyone</p>
+ <div class="excla"><p>!</p></div>
+
+ <p1 class="myname">
+    My name is <span class="highlight typing-effect">SUSHANT PAHARI</span>
+ </p1>
+
+ <p1 class="and">&</p1>
+ <p class="description">I am a <span class="dynamic-text">
+    <span>Student</span>
+    <span>Programmer</span>
+    <span>Youtuber</span>
+    <span>Learner</span>
+ </span>
+</p> 
+
+{% load static %}
+<img src="{% static 'images/profile.PNG' %}" class="Profile" alt="Placeholder Image">
+
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        My Portfolio
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'images/bg.png' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="/" class="{% if active_section == 'home' %}home active{% else %}home{% endif %}">Home</a>
+        <a href="/about" class="{% if active_section == 'about' %}about active{% else %}about{% endif %}">About</a>
+        <a href="/education" class="{% if active_section == 'education' %}education active{% else %}education{% endif %}">Education</a>
+        <a href="/skills" class="{% if active_section == 'skills' %}skills active{% else %}skills{% endif %}">Skills</a>
+        <a href="/contact" class="{% if active_section == 'contact' %}contact active{% else %}contact{% endif %}">Contact</a>
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

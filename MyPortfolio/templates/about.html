@@ -1,0 +1,36 @@
+
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} About Me {% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <img src="{% static 'images/new.png' %}" class="about-profile" alt="Sushant Pahari">
+    
+    <div class="about-text">
+        <p>Hello! I'm <span class="highlights">Sushant Pahari</span>, a passionate <span class="dynamic-text">programmer, learner, and content creator.</span></p>
+        
+        <h2>My Interests</h2>
+        <ul class="interests">
+            <li>💻 Coding & Web Development</li>
+            <li>⚽ Football Enthusiast</li>
+            <li>🎥 YouTube Content Creation</li>
+            <li>📚 Continuous Learning</li>
+        </ul>
+
+        <h2>My Goals</h2>
+        <p>My goal is to grow as a developer while building an engaging 
+            <a href="https://www.youtube.com/@pesestrians" target="_blank" style="color: #9ACD32; font-weight: bold;">YouTube community</a> 
+            , to share knowledge and creativity.
+        </p>
+
+        <h2>Fun Facts</h2>
+        <ul class="fun-facts">
+            <li> 🌍 I love exploring new tech & gadgets.</li>
+            <li> 🎮 I enjoy playing mobile football games.</li>
+            <li> 🛠   Currently learning Django & Web Development.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
